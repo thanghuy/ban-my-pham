@@ -10,9 +10,9 @@ const Header = () => {
   const size = useWindowSize();
   return (
     <div style={{ backgroundColor: "#161880" }}>
-      {size > 600 ? <CHeaderTop /> : <CHeaderTopPhone />}
-      {size > 600 ? <CHeaderMiddle /> : <CHeaderMiddlePhone />}
-      {size > 600 ? <CHeaderNavBar /> : ""}
+      {size > 900 ? <CHeaderTop /> : <CHeaderTopPhone />}
+      {size > 900 ? <CHeaderMiddle /> : <CHeaderMiddlePhone />}
+      {size > 900 ? <CHeaderNavBar /> : ""}
     </div>
   );
 };

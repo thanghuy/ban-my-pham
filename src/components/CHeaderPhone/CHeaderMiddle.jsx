@@ -9,7 +9,7 @@ const CHeaderMiddlePhone = () => {
     >
       <div className="col-span-2">
         <div
-          className="bg-white p-1 rounded flex"
+          className="bg-white p-1 rounded-lg flex"
           style={{ height: 50 }}
         >
           <input
@@ -17,7 +17,7 @@ const CHeaderMiddlePhone = () => {
             type="text"
             placeholder="Tìm kiếm sản phẩm..."
           />
-          <button className="bg-red-400 hover:bg-red-300 rounded text-white" style={{ width: 50 }}>
+          <button className="hover:bg-red-300 rounded-lg text-white" style={{ width: 50, backgroundColor: "#ff7c00" }}>
             <SearchIcon color="white" />
           </button>
         </div>

@@ -23,7 +23,7 @@ const CHeaderMiddle = () => {
       </div>
       <div className="col-span-6">
         <div
-          className="bg-white p-1 rounded flex"
+          className="bg-white p-1 rounded-lg flex"
           style={{ height: 50 }}
         >
           <input
@@ -32,19 +32,19 @@ const CHeaderMiddle = () => {
             placeholder="Tìm kiếm sản phẩm..."
           />
           <button
-            className="bg-red-400 hover:bg-red-300 rounded text-white"
-            style={{ width: 50 }}
+            className="hover:bg-red-300 rounded-lg text-white"
+            style={{ width: 50, backgroundColor: "#ff7c00" }}
           >
             <SearchIcon />
           </button>
         </div>
       </div>
-      <div className="col-span-3 flex justify-end items-center gap-4">
+      <div className="col-span-3 flex justify-end items-center">
         <div
-          className="bg-red-400 bg-opacity-75 p-5 rounded flex items-center"
-          style={{ height: 50 }}
+          className="bg-opacity-75 p-5 rounded-lg flex items-center gap-3 cursor-pointer"
+          style={{ height: 50, backgroundColor: "#ff7c00" }}
         >
-          <label className="text-white font-semibold">Giỏ hàng</label>
+          <label className="text-white font-semibold cursor-pointer">Giỏ hàng</label>
           <Badge badgeContent={4} color="primary">
             <ShoppingCartIcon style={{ fill: "white" }} />
           </Badge>

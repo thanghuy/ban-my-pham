@@ -8,7 +8,7 @@ body {
   visibility: visible !important;
 }
 textarea:focus,
-input:focus {
+input:focus, select:focus {
   outline: none;
 }
 @media only screen and (max-width: 600px) {

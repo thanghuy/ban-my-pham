@@ -8,7 +8,7 @@ const HomeModule = () => {
   const arr = [1, 2, 3, 4, 5, 6, 7, 8];
   const size = useWindowSize();
   return (
-    <div className="xl:px-20 lg:px-20 md:px-10 sm:px-2 py-2">
+    <div className="xl:px-20 lg:px-20 md:px-2 sm:px-2 py-2">
       <div className="grid xl:grid-cols-4 lg:grid-cols-5 md:grid-cols-5 sm:grid-cols-1 gap-2">
         <div className="xl:col-span-3 lg:col-span-3 md:col-span-3 sm:col-span-1">
           <CCarousel />

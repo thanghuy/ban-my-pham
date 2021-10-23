@@ -12,7 +12,7 @@ input:focus, select:focus {
   outline: none;
 }
 @media only screen and (max-width: 600px) {
-  .slick-list {
+  .custom-slider-show custom-slider-show  {
     height: 200px !important;
     --tw-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
       0 4px 6px -2px rgba(0, 0, 0, 0.05);
@@ -21,31 +21,31 @@ input:focus, select:focus {
     border-radius: 8px;
     background-color: white;
   }
-  .slick-dots {
+  .custom-slider-show .slick-dots {
     bottom: 5px !important;
   }
-  .slick-next {
+  .custom-slider-show .slick-next {
     right: 0px !important;
     width: 30px !important;
   }
-  .slick-prev {
+  .custom-slider-show .slick-prev {
     left: 0px !important;
     z-index: 100;
     width: 30px !important;
   }
-  .slick-prev:before,
-  .slick-next:before {
+  .custom-slider-show .slick-prev:before,
+  .custom-slider-show .slick-next:before {
     font-size: 30px !important;
     color: rgb(113, 170, 255) !important;
   }
-  .slick-dots li button:before {
+  .custom-slider-show .slick-dots li button:before {
     font-size: 10px !important;
     color: rgb(255, 124, 0) !important;
   }
 }
 
 @media only screen and (min-width: 700px) {
-  .slick-list {
+  .custom-slider-show .slick-list {
     height: 400px !important;
     --tw-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
       0 4px 6px -2px rgba(0, 0, 0, 0.05);
@@ -54,24 +54,24 @@ input:focus, select:focus {
     border-radius: 8px;
     background-color: white;
   }
-  .slick-dots {
+  .custom-slider-show .slick-dots {
     bottom: 5px !important;
   }
-  .slick-next {
+  .custom-slider-show .slick-next {
     right: 0px !important;
     width: 50px !important;
   }
-  .slick-prev {
+  .custom-slider-show .slick-prev {
     left: 0px !important;
     width: 50px !important;
     z-index: 100;
   }
-  .slick-prev:before,
-  .slick-next:before {
+  .custom-slider-show .slick-prev:before,
+  .custom-slider-show .slick-next:before {
     font-size: 50px !important;
     color: rgb(113, 170, 255) !important;
   }
-  .slick-dots li button:before {
+  .custom-slider-show .slick-dots li button:before {
     font-size: 15px !important;
     color: rgb(255, 124, 0) !important;
   }

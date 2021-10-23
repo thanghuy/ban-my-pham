@@ -1,12 +1,76 @@
 body {
-    background-color: #f2f2f2;
-    margin: 0 auto;
-    font-family: var(--fonts_name),Arial,sans-serif;
-    line-height: var(--font_size_plus8);
-    letter-spacing: normal;
-    opacity: 1!important;
-    visibility: visible!important;
+  background-color: #f2f2f2;
+  margin: 0 auto;
+  font-family: var(--fonts_name), Arial, sans-serif;
+  line-height: var(--font_size_plus8);
+  letter-spacing: normal;
+  opacity: 1 !important;
+  visibility: visible !important;
 }
-textarea:focus, input:focus{
-    outline: none;
+textarea:focus,
+input:focus {
+  outline: none;
+}
+@media only screen and (max-width: 600px) {
+  .slick-list {
+    height: 200px !important;
+    --tw-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+      0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),
+      var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+    border-radius: 8px;
+  }
+  .slick-dots {
+    bottom: 5px !important;
+  }
+  .slick-next {
+    right: 0px !important;
+    width: 30px !important;
+  }
+  .slick-prev {
+    left: 0px !important;
+    z-index: 100;
+    width: 30px !important;
+  }
+  .slick-prev:before,
+  .slick-next:before {
+    font-size: 30px !important;
+    color: rgb(113, 170, 255) !important;
+  }
+  .slick-dots li button:before {
+    font-size: 10px !important;
+    color: rgb(255, 124, 0) !important;
+  }
+}
+
+@media only screen and (min-width: 700px) {
+  .slick-list {
+    height: 400px !important;
+    --tw-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+      0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),
+      var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+    border-radius: 8px;
+  }
+  .slick-dots {
+    bottom: 5px !important;
+  }
+  .slick-next {
+    right: 0px !important;
+    width: 50px !important;
+  }
+  .slick-prev {
+    left: 0px !important;
+    width: 50px !important;
+    z-index: 100;
+  }
+  .slick-prev:before,
+  .slick-next:before {
+    font-size: 50px !important;
+    color: rgb(113, 170, 255) !important;
+  }
+  .slick-dots li button:before {
+    font-size: 15px !important;
+    color: rgb(255, 124, 0) !important;
+  }
 }

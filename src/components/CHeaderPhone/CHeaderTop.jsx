@@ -3,6 +3,7 @@ import Link from "next/link";
 import PersonOutlineIcon from "@mui/icons-material/PersonOutline";
 import DehazeIcon from "@mui/icons-material/Dehaze";
 import Drawer from "@mui/material/Drawer";
+import ListMenuPhone from "./CListMenu";
 const CHeaderTopPhone = () => {
   const [showMenuListLeft, setShowMenuListLeft] = React.useState(false);
   const [showMenuListRight, setShowMenuListRight] = React.useState(false);
@@ -13,6 +14,28 @@ const CHeaderTopPhone = () => {
   const toggleDrawerRight = (open) => (e) => {
     setShowMenuListRight(open);
   };
+  const menu = [
+    {
+      key: 1,
+      name: "Trang chủ"
+    },
+    {
+      key: 2,
+      name: "Sản phẩm"
+    },
+    {
+      key: 3,
+      name: "Làm đẹp"
+    },
+    {
+      key: 4,
+      name: "Giới thiệu"
+    },
+    {
+      key: 5,
+      name: "Liên hệ"
+    }
+  ]
   return (
     <div className="grid grid-cols-3 gap-4 px-2 pt-3 items-center">
       <div className="col-span-1">
@@ -47,14 +70,14 @@ const CHeaderTopPhone = () => {
         open={showMenuListLeft}
         onClose={toggleDrawerLeft(false)}
       >
-        <div style={{ width: "14rem" }}>huythang</div>
+        <ListMenuPhone arrMenu={menu} />
       </Drawer>
       <Drawer
         anchor={"right"}
         open={showMenuListRight}
         onClose={toggleDrawerRight(false)}
       >
-        <div style={{ width: "14rem" }}>huythang</div>
+        <ListMenuPhone arrMenu={menu} />
       </Drawer>
     </div>
   );

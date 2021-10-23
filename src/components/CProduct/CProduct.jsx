@@ -11,7 +11,7 @@ const CProduct = ({ className }) => {
         <a>
           <img src="https://images.unsplash.com/photo-1449247709967-d4461a6a6103?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=400&h=400&q=80" />
           <div className="pt-3 flex items-center justify-between">
-            <p className="font-semibold">Kem Dưỡng La Roche-Posay Làm Dịu...</p>
+            <p className="font-semibold sm:text-xs xl:text-base lg:text-base md:text-base">Kem Dưỡng La Roche-Posay Làm Dịu...</p>
           </div>
         </a>
       </Link>
@@ -22,7 +22,7 @@ const CProduct = ({ className }) => {
         </strike>
       </div>
       <div className="w-full mt-3">
-        <Rating name="read-only" value={4} readOnly />
+        <Rating size="small" name="read-only" value={4} readOnly />
       </div>
       <div className="w-full mt-3 flex">
         {/* <button className="w-1/4">

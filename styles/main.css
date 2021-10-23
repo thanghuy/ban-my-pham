@@ -1,5 +1,5 @@
 body {
-    background-color: var(--body_bg);
+    background-color: #f2f2f2;
     margin: 0 auto;
     font-family: var(--fonts_name),Arial,sans-serif;
     line-height: var(--font_size_plus8);

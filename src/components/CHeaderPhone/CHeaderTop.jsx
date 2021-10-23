@@ -7,7 +7,7 @@ const CHeaderTopPhone = () => {
     <div className="grid grid-cols-3 gap-4 px-2 pt-3 items-center">
       <div className="col-span-1">
         <button>
-          <DehazeIcon />
+          <DehazeIcon style={{ fill: "white" }} />
         </button>
       </div>
       <div className="col-span-1">
@@ -23,7 +23,7 @@ const CHeaderTopPhone = () => {
       </div>
       <div className="col-span-1 flex justify-end">
         <button>
-          <PersonOutlineIcon />
+          <PersonOutlineIcon style={{ fill: "white" }} />
         </button>
       </div>
     </div>

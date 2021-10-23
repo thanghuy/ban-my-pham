@@ -1,0 +1,12 @@
+body {
+    background-color: var(--body_bg);
+    margin: 0 auto;
+    font-family: var(--fonts_name),Arial,sans-serif;
+    line-height: var(--font_size_plus8);
+    letter-spacing: normal;
+    opacity: 1!important;
+    visibility: visible!important;
+}
+textarea:focus, input:focus{
+    outline: none;
+}

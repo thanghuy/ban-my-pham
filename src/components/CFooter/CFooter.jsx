@@ -1,6 +1,6 @@
 const CFooter = () => {
   return (
-    <footer className="text-gray-600 body-font">
+    <footer className="text-gray-600 body-font" style={{ backgroundColor: "white" }}>
       <div className="container px-5 py-24 mx-auto flex md:items-center lg:items-start md:flex-row md:flex-nowrap flex-wrap flex-col">
         <div className="w-64 flex-shrink-0 md:mx-0 mx-auto text-center md:text-left">
           <a
@@ -135,7 +135,7 @@ const CFooter = () => {
               className="text-gray-600 ml-1"
               target="_blank"
             >
-              Tailwind Elements
+              Nguyen Huy Thang - Ninh Ngoc Hieu
             </a>
           </p>
           <span className="inline-flex sm:ml-auto sm:mt-0 mt-2 justify-center sm:justify-start">

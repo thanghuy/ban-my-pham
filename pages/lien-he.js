@@ -1,6 +1,6 @@
-import Head from "next/head";
+import Head from 'next/head'
 
-export default function ProductDetails() {
+export default function Contact() {
   return (
     <div>
       <Head>
@@ -9,8 +9,8 @@ export default function ProductDetails() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className="w-full h-full flex justify-center items-center">
-        Danh sách sản phẩm
+        Liên hệ
       </div>
     </div>
-  );
+  )
 }

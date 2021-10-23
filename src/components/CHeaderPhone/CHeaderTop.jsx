@@ -17,23 +17,45 @@ const CHeaderTopPhone = () => {
   const menu = [
     {
       key: 1,
-      name: "Trang chủ"
+      name: "Trang chủ",
+      link: "/"
     },
     {
       key: 2,
-      name: "Sản phẩm"
+      name: "Sản phẩm",
+      link: "/danh-sach-san-pham"
     },
     {
       key: 3,
-      name: "Làm đẹp"
+      name: "Làm đẹp",
+      link: "/danh-sach-san-pham"
     },
     {
       key: 4,
-      name: "Giới thiệu"
+      name: "Giới thiệu",
+      link: "/gioi-thieu"
     },
     {
       key: 5,
-      name: "Liên hệ"
+      name: "Liên hệ",
+      link: "/lien-he"
+    }
+  ]
+  const menuUser = [
+    {
+      key: 1,
+      name: "Theo dõi đơn hàng",
+      link: "/don-hang"
+    },
+    {
+      key: 2,
+      name: "Đăng nhập",
+      link: "/dang-nhap"
+    },
+    {
+      key: 3,
+      name: "Đăng ký",
+      link: "/dang-ky"
     }
   ]
   return (
@@ -70,14 +92,14 @@ const CHeaderTopPhone = () => {
         open={showMenuListLeft}
         onClose={toggleDrawerLeft(false)}
       >
-        <ListMenuPhone arrMenu={menu} />
+        <ListMenuPhone setShowMenuListLeft={setShowMenuListLeft} setShowMenuListRight={setShowMenuListRight}  arrMenu={menu} />
       </Drawer>
       <Drawer
         anchor={"right"}
         open={showMenuListRight}
         onClose={toggleDrawerRight(false)}
       >
-        <ListMenuPhone arrMenu={menu} />
+        <ListMenuPhone setShowMenuListLeft={setShowMenuListLeft} setShowMenuListRight={setShowMenuListRight} arrMenu={menuUser} />
       </Drawer>
     </div>
   );

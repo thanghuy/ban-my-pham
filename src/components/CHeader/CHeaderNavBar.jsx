@@ -10,22 +10,22 @@ const CHeaderNavBar = () => {
           </Link>
         </li>
         <li className="mr-6">
-          <Link href="/chi-tiet-san-pham">
+          <Link href="/danh-sach-san-pham">
             <a className="text-white font-semibold">Sản phẩm</a>
           </Link>
         </li>
         <li className="mr-6">
-          <Link href="/chi-tiet-san-pham">
+          <Link href="/danh-sach-san-pham">
             <a className="text-white font-semibold">Chăm sóc da</a>
           </Link>
         </li>
         <li className="mr-6">
-          <Link href="/chi-tiet-san-pham">
+          <Link href="/danh-sach-san-pham">
             <a className="text-white font-semibold">Trang điểm</a>
           </Link>
         </li>
         <li className="mr-6">
-          <Link href="/chi-tiet-san-pham">
+          <Link href="/danh-sach-san-pham">
             <a className="text-white font-semibold">Nước hoa</a>
           </Link>
         </li>

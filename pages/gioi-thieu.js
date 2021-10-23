@@ -1,6 +1,6 @@
 import Head from "next/head";
 
-export default function ProductDetails() {
+export default function GioiThieu() {
   return (
     <div>
       <Head>
@@ -9,7 +9,7 @@ export default function ProductDetails() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className="w-full h-full flex justify-center items-center">
-        Danh sách sản phẩm
+        Giới thiệu
       </div>
     </div>
   );

@@ -3,8 +3,10 @@ import Link from "next/link";
 import SearchIcon from "@mui/icons-material/Search";
 import Badge from "@mui/material/Badge";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
+import { useRouter } from "next/router"
 
 const CHeaderMiddle = () => {
+  const router = useRouter()
   return (
     <div
       className="grid grid-cols-12 gap-4 px-20 items-center"
@@ -34,6 +36,7 @@ const CHeaderMiddle = () => {
           <button
             className="hover:bg-red-300 rounded-lg text-white"
             style={{ width: 50, backgroundColor: "#ff7c00" }}
+            onClick={() => router.push("/danh-sach-san-pham")}
           >
             <SearchIcon />
           </button>
@@ -43,6 +46,7 @@ const CHeaderMiddle = () => {
         <div
           className="bg-opacity-75 p-5 rounded-lg flex items-center gap-3 cursor-pointer"
           style={{ height: 50, backgroundColor: "#ff7c00" }}
+          onClick={() => router.push("/gio-hang")}
         >
           <label className="text-white font-semibold cursor-pointer">Giỏ hàng</label>
           <Badge badgeContent={4} color="primary">

@@ -31,7 +31,7 @@ function ScrollTop(props) {
       <div
         onClick={handleClick}
         role="presentation"
-        style={{ position: "fixed", bottom: 16, right: 16 }}
+        style={{ position: "fixed", bottom: 60, right: 16 }}
       >
         {children}
       </div>

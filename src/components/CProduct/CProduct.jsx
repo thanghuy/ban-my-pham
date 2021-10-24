@@ -7,7 +7,7 @@ const CProduct = ({ className }) => {
     <div
       className={`${className} transition duration-500 ease-in-out bg-white rounded-lg p-3 hover:grow shadow-lg transform hover:-translate-y-1 hover:scale-1`}
     >
-      <Link href="/chi-tiet-san-pham">
+      <Link href="/chi-tiet/[slug]" as={"/chi-tiet/huythang"}>
         <a>
           <img src="https://images.unsplash.com/photo-1449247709967-d4461a6a6103?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=400&h=400&q=80" />
           <div className="pt-3 flex items-center justify-between">

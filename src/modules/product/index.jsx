@@ -12,10 +12,13 @@ const ProductModule = () => {
         <img src="https://cdn.shopify.com/s/files/1/0031/5870/4239/files/slider-02_0a284dac-c050-4f9c-8d5c-74b564a0bcd3_1298x.jpg?v=1615876132" />
         <img src="https://cdn.shopify.com/s/files/1/0031/5870/4239/files/slider-02_0a284dac-c050-4f9c-8d5c-74b564a0bcd3_1298x.jpg?v=1615876132" />
       </CCarousel>
-      <div className="grid xl:grid-cols-5 lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 gap-2 mt-5 mb-5">
-        <div className="xl:col-span-5 lg:col-span-4 md:col-span-3 sm:col-span-2">
-          fillter
+      <div className="w-full gap-2 flex items-center px-2 shadow-lg bg-white mt-5 rounded-lg border-gray-300"
+        style={{ height: 50 }}
+      >
+          <label>Lọc</label>
+
         </div>
+      <div className="grid xl:grid-cols-5 lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 gap-2 mt-5 mb-5">
         {arr.map((item) => {
           return <CProduct className="col-span-1" key={item} />;
         })}

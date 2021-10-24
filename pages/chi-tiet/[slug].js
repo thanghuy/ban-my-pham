@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import ProductDetailModulel from '../src/modules/product-detail'
+import ProductDetailModulel from '../../src/modules/product-detail'
 
 export default function ProductDetails() {
   return (
@@ -12,4 +12,4 @@ export default function ProductDetails() {
       <ProductDetailModulel />
     </div>
   )
-}
+}   

@@ -23,12 +23,12 @@ const CHeaderTopPhone = () => {
     {
       key: 2,
       name: "Sản phẩm",
-      link: "/danh-sach-san-pham"
+      link: "/san-pham/danh-sach-san-pham"
     },
     {
       key: 3,
       name: "Làm đẹp",
-      link: "/danh-sach-san-pham"
+      link: "/san-pham/lam-dep"
     },
     {
       key: 4,

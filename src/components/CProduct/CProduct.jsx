@@ -16,8 +16,8 @@ const CProduct = ({ className }) => {
         </a>
       </Link>
       <div className="w-full flex items-center gap-4">
-        <p className="pt-1 font-semibold text-red-600">5.000.000 VNĐ</p>
-        <strike className="pt-1 font-semibold text-gray-400 text-xs">
+        <p className="custom-font-size pt-1 font-semibold text-red-600">5.000.000 VNĐ</p>
+        <strike className="custom-font-size pt-1 font-semibold text-gray-400 text-xs">
           500.000 VNĐ
         </strike>
       </div>

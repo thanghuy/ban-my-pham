@@ -12,12 +12,12 @@ const HomeModule = () => {
       <div className="grid xl:grid-cols-4 lg:grid-cols-5 md:grid-cols-5 sm:grid-cols-1 gap-2">
         <div className="xl:col-span-3 lg:col-span-3 md:col-span-3 sm:col-span-1">
           <CCarousel>
-            <img src="https://mir-s3-cdn-cf.behance.net/project_modules/1400/faa27670584061.5bd3dcfabe723.png" />
-            <img src="http://thegioidohoacom.s3.ap-southeast-1.amazonaws.com/wp-content/uploads/2018/12/12020604/thi%E1%BA%BFt-k%E1%BA%BF-banner-m%E1%BB%B9-ph%E1%BA%A9m-61.png" />
+            <img src="https://cdn.shopify.com/s/files/1/0031/5870/4239/files/slider-02_0a284dac-c050-4f9c-8d5c-74b564a0bcd3_1298x.jpg?v=1615876132" />
+            <img src="https://cdn.shopify.com/s/files/1/0031/5870/4239/files/slider-02_0a284dac-c050-4f9c-8d5c-74b564a0bcd3_1298x.jpg?v=1615876132" />
 
-            <img src="https://topprint.vn/wp-content/uploads/2021/07/banner-my-pham-dep-12-1024x390.png" />
+            <img src="https://cdn.shopify.com/s/files/1/0031/5870/4239/files/slider-02_0a284dac-c050-4f9c-8d5c-74b564a0bcd3_1298x.jpg?v=1615876132" />
 
-            <img src="https://mir-s3-cdn-cf.behance.net/project_modules/1400/faa27670584061.5bd3dcfabe723.png" />
+            <img src="https://cdn.shopify.com/s/files/1/0031/5870/4239/files/slider-02_0a284dac-c050-4f9c-8d5c-74b564a0bcd3_1298x.jpg?v=1615876132" />
           </CCarousel>
         </div>
         {size > 600 ? (
@@ -54,8 +54,13 @@ const HomeModule = () => {
           </div>
         )}
       </div>
+      <div className="customer-height-div cw-full grid grid-cols-3 gap-2 mt-3">
+        <div className="col-span-1 shadow-lg bg-white rounded-lg" style={{ backgroundImage: "url(https://cdn.shopify.com/s/files/1/0031/5870/4239/files/banner-01_56fd5f0e-a963-4aee-8bc3-c219b4382ece_635x250.jpg?v=1615876552)" }}></div>
+        <div className="col-span-1 shadow-lg bg-white rounded-lg" style={{ backgroundImage: "url(https://cdn.shopify.com/s/files/1/0031/5870/4239/files/banner-02_ad5901b5-e44b-4213-a0d3-3ef84fdbbc53_635x250.jpg?v=1615876577)" }}></div>
+        <div className="col-span-1 shadow-lg bg-white rounded-lg" style={{ backgroundImage: "url(https://cdn.shopify.com/s/files/1/0031/5870/4239/files/banner-02_ad5901b5-e44b-4213-a0d3-3ef84fdbbc53_635x250.jpg?v=1615876577)" }}></div>
+      </div>
       <div
-        className="w-full flex mb-5 mt-5 justify-center items-center"
+        className="w-full flex mb-5 mt-5 justify-start items-center"
         style={{ height: 40 }}
       >
         <h2 className="sm:text-xl xl:text-2xl font-medium">Sản phẩm mới</h2>
@@ -66,7 +71,7 @@ const HomeModule = () => {
         })}
       </div>
       <div
-        className="w-full flex mb-5 mt-5 justify-center items-center"
+        className="w-full flex mb-5 mt-5 justify-start items-center"
         style={{ height: 40 }}
       >
         <h2 className="sm:text-xl xl:text-2xl font-medium">Tất cả sản phẩm</h2>

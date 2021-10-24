@@ -7,7 +7,6 @@ import { useRouter } from "next/router"
 
 const style = {
   width: "100%",
-  maxWidth: 360,
   bgcolor: "background.paper",
 };
 
@@ -23,7 +22,7 @@ export default function ListMenuPhone({ setShowMenuListLeft, setShowMenuListRigh
       {arrMenu.map((item) => {
         return (
           <React.Fragment key={item.key}>
-            <ListItem button onClick={() => handleClickMenu(item.link)}>
+            <ListItem style={{ width: 250 }} button onClick={() => handleClickMenu(item.link)}>
               <ListItemText primary={item.name} />
             </ListItem>
             <Divider />

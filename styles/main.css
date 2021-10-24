@@ -44,7 +44,13 @@ textarea:focus {
   }
   .custom-slider-show .slick-dots li button:before {
     font-size: 10px !important;
-    color: rgb(255, 124, 0) !important;
+    color: #ffd429 !important;
+  }
+  .custom-font-size{
+    font-size: 12px;
+  }
+  .customer-height-div{
+    height: 80px;
   }
 }
 
@@ -77,6 +83,18 @@ textarea:focus {
   }
   .custom-slider-show .slick-dots li button:before {
     font-size: 15px !important;
-    color: rgb(255, 124, 0) !important;
+    color: #ffd429 !important;
   }
+  .customer-height-div{
+    height: 200px;
+  }
+}
+
+.fixed-menu-bar{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #ff175a;
+  z-index: 1000;
 }

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import SearchIcon from "@mui/icons-material/Search";
 import Badge from "@mui/material/Badge";
@@ -8,16 +8,32 @@ import { useRouter } from "next/router";
 
 const CHeaderMiddle = () => {
   const router = useRouter();
+  const [isFixedMenu, setFixedMenu] = useState(false);
+  const handleScroll = () => {
+    if(window.scrollY >= 100){
+      setFixedMenu(true)
+    }
+    else{
+      setFixedMenu(false)
+    }
+  };
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    }
+  },[])
+ 
   return (
     <div
-      className="grid grid-cols-12 gap-4 px-20 items-center"
+      className={`${isFixedMenu ? "fixed-menu-bar" : ""} grid grid-cols-12 gap-4 px-20 items-center`}
       style={{ height: 80 }}
     >
       <div className="col-span-3">
         <Link href="/">
           <a>
             <img
-              src="https://cdn.shopify.com/s/files/1/0031/5870/4239/files/logo_1f074a2f-7556-4816-864f-646cecc13d65_200x70.png?v=1614950171"
+              src="https://cdn.shopify.com/s/files/1/0031/5870/4239/files/logo_dae52ba6-8214-40c5-9a44-d0c32a233d1f_215x.png?v=1615803687"
               width="200"
               height="60"
             />

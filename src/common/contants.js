@@ -1,6 +1,6 @@
-export const API = {
+export const SYSTEM_API = {
     PRODUCT: {
-        GET_PRODUCT: "/api/abc"
+        GET_PRODUCT: "RSVN/DMUC/ColorType"
     },
     CATEGORY: {
         GET_CATERGORY: "/api/abc"

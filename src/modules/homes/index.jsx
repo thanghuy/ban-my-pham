@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useEffect } from "react";
+import ProductApi from "../../api/product/productApi";
 import CButton from "../../components/CButton";
 import CCarousel from "../../components/CCarousel/CCarousel";
 import CProduct from "../../components/CProduct/CProduct";
@@ -7,6 +8,17 @@ import useWindowSize from "../../hooks/useWindowSize";
 const HomeModule = () => {
   const arr = [1, 2, 3, 4, 5, 6, 7, 8];
   const size = useWindowSize();
+  useEffect(() => {
+    const fetchProduct = async () => {
+      try {
+        const res = await ProductApi.getProduct();
+        console.log(res)
+      } catch (error) {
+        
+      }
+    }
+    fetchProduct();
+  }, [])
   return (
     <div className="xl:px-20 lg:px-20 md:px-2 sm:px-2 py-2">
       <div className="grid xl:grid-cols-4 lg:grid-cols-5 md:grid-cols-5 sm:grid-cols-1 gap-2">

@@ -1,6 +1,6 @@
 import axios from 'axios';
 import queryString from 'query-string';
-const URL = "https://sit.api.hicas.vn";
+const URL = "http://localhost:8888";
 const axiosClient = axios.create({
     baseURL : URL,
     headers : {

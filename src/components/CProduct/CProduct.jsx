@@ -29,8 +29,8 @@ const CProduct = ({ className }) => {
           <VisibilityIcon />
         </button> */}
         <button
-          className="w-full text-white font-semibold rounded-lg"
-          style={{ backgroundColor: "#ff7c00", height: 35 }}
+          className="w-full text-black font-semibold rounded-lg"
+          style={{ backgroundColor: "#ffd429", height: 35 }}
         >
           Thêm vào giỏ hàng
         </button>

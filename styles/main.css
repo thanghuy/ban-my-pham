@@ -7,10 +7,14 @@ body {
   opacity: 1 !important;
   visibility: visible !important;
 }
-textarea:focus,
-input:focus, select:focus {
+a:focus,
+button:focus,
+input:focus,
+select:focus,
+textarea:focus {
   outline: none;
 }
+
 @media only screen and (max-width: 600px) {
   .custom-slider-show custom-slider-show  {
     height: 200px !important;

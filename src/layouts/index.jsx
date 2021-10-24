@@ -1,3 +1,4 @@
+import CContact from "../components/CFooter/CContact";
 import BackToTop from "./back-to-top";
 import Footer from "./footer";
 import Header from "./header";
@@ -9,6 +10,7 @@ const LayOutWeb = ({children}) => {
                 {children}
             <Footer />
             <BackToTop />
+            {/* <CContact /> */}
         </>
     )
 }

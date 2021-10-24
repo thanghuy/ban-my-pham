@@ -1,4 +1,4 @@
-import CCarouselDetail from "../CCarousel/CCarouselDetail";
+import CCarousel from "../CCarousel/CCarousel";
 
 const CProductDetail = () => {
   return (
@@ -36,10 +36,16 @@ const CProductDetail = () => {
               </div>
             </div>
             <div className="flex items-center mt-6 gap-4">
-              <button className="flex justify-center items-center px-6 py-3 border border-transparent rounded-lg text-base font-medium text-white bg-indigo-600 hover:bg-indigo-70">
+              <button
+                className="flex justify-center items-center px-6 py-3 border border-transparent rounded-lg text-base font-medium text-white bg-indigo-600 hover:bg-indigo-70"
+                style={{ backgroundColor: "#ff4949" }}
+              >
                 Mua Ngay
               </button>
-              <button className="px-6 py-3 text-gray-600 border rounded-md hover:bg-gray-200 focus:outline-none">
+              <button
+                className="px-6 py-3 text-black font-semibold  border rounded-md hover:bg-gray-200 focus:outline-none"
+                style={{ backgroundColor: "#ffd429" }}
+              >
                 Thêm vào giỏ hàng
               </button>
             </div>

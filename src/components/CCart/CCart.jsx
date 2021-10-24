@@ -48,10 +48,10 @@ const CCart = () => {
               />
             </div>
             <span className="text-center w-1/5 font-semibold text-sm text-red-600">
-                1.000.000 VNĐ
+              1.000.000 VNĐ
             </span>
             <span className="text-center w-1/5 font-semibold text-sm text-red-600">
-                5.000.000 VNĐ
+              5.000.000 VNĐ
             </span>
           </div>
           <a
@@ -67,13 +67,17 @@ const CCart = () => {
             Tiếp tục mua hàng
           </a>
         </div>
-        <div id="summary" className="w-1/4 px-5 py-5" style={{ borderLeft: "1px solid #d3d3d3" }}>
-          <h1 className="font-semibold text-xl border-b pb-5">
-            Đơn hàng
-          </h1>
+        <div
+          id="summary"
+          className="w-1/4 px-5 py-5"
+          style={{ borderLeft: "1px solid #d3d3d3" }}
+        >
+          <h1 className="font-semibold text-xl border-b pb-5">Đơn hàng</h1>
           <div className="flex justify-between mt-10 mb-5">
             <span className="font-semibold text-sm">Thành tiền</span>
-            <span className="font-semibold text-sm text-red-600">5.000.000 VNĐ</span>
+            <span className="font-semibold text-sm text-red-600">
+              5.000.000 VNĐ
+            </span>
           </div>
           <div>
             <label className="font-medium inline-block mb-3 text-sm">
@@ -89,7 +93,10 @@ const CCart = () => {
               <span>Tổng tiền</span>
               <span className="font-semibold text-red-600">5.000.000 VNĐ</span>
             </div>
-            <button className="bg-indigo-500 font-semibold hover:bg-indigo-600 py-3 text-sm text-white w-full rounded-lg">
+            <button
+              className="font-semibold hover:bg-indigo-600 py-3 text-sm text-white w-full rounded-lg"
+              style={{ backgroundColor: "#ff4949" }}
+            >
               Đặt hàng
             </button>
           </div>

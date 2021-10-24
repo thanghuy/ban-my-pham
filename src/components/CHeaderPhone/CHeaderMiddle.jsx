@@ -17,7 +17,7 @@ const CHeaderMiddlePhone = () => {
             type="text"
             placeholder="Tìm kiếm sản phẩm..."
           />
-          <button className="hover:bg-red-300 rounded-lg text-white" style={{ width: 50, backgroundColor: "#ff7c00" }}>
+          <button className="hover:bg-red-300 rounded-lg text-black" style={{ width: 50, backgroundColor: "#ffd429" }}>
             <SearchIcon color="white" />
           </button>
         </div>

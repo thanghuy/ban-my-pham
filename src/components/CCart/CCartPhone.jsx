@@ -104,12 +104,12 @@ const CCartPhone = () => {
           </span>
         </div>
         <div className="mt-6">
-          <a
-            href="#"
-            className="flex justify-center items-center px-6 py-3 border border-transparent rounded-lg text-base font-medium text-white bg-indigo-600 hover:bg-indigo-700"
-          >
+          <button
+            className="w-full flex justify-center items-center px-6 py-3 border border-transparent rounded-lg text-base font-medium text-white bg-indigo-600 hover:bg-indigo-700"
+            style={{ backgroundColor: "#ff4949" }}
+         >
             Đặt hàng
-          </a>
+          </button>
         </div>
         <div className="mt-6 flex justify-center text-sm text-center text-gray-500">
           <p>

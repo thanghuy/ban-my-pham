@@ -72,7 +72,7 @@ const CHeaderTopPhone = () => {
         <Link href="/">
           <a>
             <img
-              src="https://adiviet.vn/assets/images/adivietlogowebstie.svg"
+              src="https://cdn.shopify.com/s/files/1/0031/5870/4239/files/logo_1f074a2f-7556-4816-864f-646cecc13d65_200x70.png?v=1614950171"
               width="100"
               height="60"
             />

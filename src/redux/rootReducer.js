@@ -1,6 +1,8 @@
 import { combineReducers } from "redux";
 import bootstrapSlice from "./controller/boostrap.slice"
+import cartSlice from "./controller/cart.slice";
 const rootReducer = combineReducers({
-    boostrap: bootstrapSlice
+    boostrap: bootstrapSlice,
+    cart: cartSlice
 })
 export default rootReducer;

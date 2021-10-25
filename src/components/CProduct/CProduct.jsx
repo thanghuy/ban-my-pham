@@ -3,15 +3,16 @@ import Link from "next/link";
 import Rating from "@mui/material/Rating";
 import { useDispatch } from "react-redux";
 import { setIsAlert } from "../../redux/controller/boostrap.slice";
+import { listCartDefaut } from "../../common/defaultMenu";
+import { setAddToCart } from "../../redux/controller/cart.slice";
 const CProduct = ({ className, item }) => {
   const dispatch = useDispatch();
-
-
   const handelAddToCart = (idProduct) => {
     dispatch(setIsAlert({
       isAlert: true,
       titleAlert: "Thêm giỏ hàng thành công"
     }))
+    dispatch(setAddToCart(listCartDefaut))
   };
   return (
     <div

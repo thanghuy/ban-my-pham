@@ -19,7 +19,7 @@ const StyledBadge = styled(Badge)(({ theme }) => ({
   },
 }));
 
-const CHeaderMiddle = () => {
+const CHeaderMiddle = ({inforCart}) => {
   const router = useRouter();
   const [isFixedMenu, setFixedMenu] = useState(false);
   const [showMenuListLeft, setShowMenuListLeft] = React.useState(false);
@@ -95,7 +95,7 @@ const CHeaderMiddle = () => {
           <label className="text-black font-semibold cursor-pointer">
             Giỏ hàng
           </label>
-          <StyledBadge badgeContent={4} color="primary">
+          <StyledBadge badgeContent={inforCart.totalAmount} color="primary">
             <ShoppingCartIcon />
           </StyledBadge>
         </div>

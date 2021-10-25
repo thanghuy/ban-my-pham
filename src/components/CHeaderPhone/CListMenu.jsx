@@ -22,7 +22,7 @@ export default function ListMenuPhone({ setShowMenuListLeft, setShowMenuListRigh
       {arrMenu.map((item) => {
         return (
           <React.Fragment key={item.key}>
-            <ListItem style={{ width: 250 }} button onClick={() => handleClickMenu(item.link)}>
+            <ListItem style={{ width: `350px` }} button onClick={() => handleClickMenu(item.link)}>
               <ListItemText primary={item.name} />
             </ListItem>
             <Divider />

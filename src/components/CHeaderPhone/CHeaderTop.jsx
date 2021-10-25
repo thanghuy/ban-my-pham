@@ -4,6 +4,7 @@ import PersonOutlineIcon from "@mui/icons-material/PersonOutline";
 import DehazeIcon from "@mui/icons-material/Dehaze";
 import Drawer from "@mui/material/Drawer";
 import ListMenuPhone from "./CListMenu";
+import { menuList, menuUser } from "../../common/defaultMenu";
 const CHeaderTopPhone = () => {
   const [showMenuListLeft, setShowMenuListLeft] = React.useState(false);
   const [showMenuListRight, setShowMenuListRight] = React.useState(false);
@@ -14,50 +15,7 @@ const CHeaderTopPhone = () => {
   const toggleDrawerRight = (open) => (e) => {
     setShowMenuListRight(open);
   };
-  const menu = [
-    {
-      key: 1,
-      name: "Trang chủ",
-      link: "/"
-    },
-    {
-      key: 2,
-      name: "Sản phẩm",
-      link: "/san-pham/danh-sach-san-pham"
-    },
-    {
-      key: 3,
-      name: "Làm đẹp",
-      link: "/san-pham/lam-dep"
-    },
-    {
-      key: 4,
-      name: "Giới thiệu",
-      link: "/gioi-thieu"
-    },
-    {
-      key: 5,
-      name: "Liên hệ",
-      link: "/lien-he"
-    }
-  ]
-  const menuUser = [
-    {
-      key: 1,
-      name: "Theo dõi đơn hàng",
-      link: "/don-hang"
-    },
-    {
-      key: 2,
-      name: "Đăng nhập",
-      link: "/dang-nhap"
-    },
-    {
-      key: 3,
-      name: "Đăng ký",
-      link: "/dang-ky"
-    }
-  ]
+  
   return (
     <div className="grid grid-cols-3 gap-4 px-2 pt-3 items-center">
       <div className="col-span-1">
@@ -92,12 +50,13 @@ const CHeaderTopPhone = () => {
         open={showMenuListLeft}
         onClose={toggleDrawerLeft(false)}
       >
-        <ListMenuPhone setShowMenuListLeft={setShowMenuListLeft} setShowMenuListRight={setShowMenuListRight}  arrMenu={menu} />
+        <ListMenuPhone setShowMenuListLeft={setShowMenuListLeft} setShowMenuListRight={setShowMenuListRight}  arrMenu={menuList} />
       </Drawer>
       <Drawer
         anchor={"right"}
         open={showMenuListRight}
         onClose={toggleDrawerRight(false)}
+        variant="persistent"
       >
         <ListMenuPhone setShowMenuListLeft={setShowMenuListLeft} setShowMenuListRight={setShowMenuListRight} arrMenu={menuUser} />
       </Drawer>

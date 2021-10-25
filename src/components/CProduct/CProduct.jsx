@@ -1,8 +1,18 @@
 import React from "react";
 import Link from "next/link";
-import VisibilityIcon from "@mui/icons-material/Visibility";
 import Rating from "@mui/material/Rating";
-const CProduct = ({ className }) => {
+import { useDispatch } from "react-redux";
+import { setIsAlert } from "../../redux/controller/boostrap.slice";
+const CProduct = ({ className, item }) => {
+  const dispatch = useDispatch();
+
+
+  const handelAddToCart = (idProduct) => {
+    dispatch(setIsAlert({
+      isAlert: true,
+      titleAlert: "Thêm giỏ hàng thành công"
+    }))
+  };
   return (
     <div
       className={`${className} transition duration-500 ease-in-out bg-white rounded-lg p-3 hover:grow shadow-lg transform hover:-translate-y-1 hover:scale-1`}
@@ -11,12 +21,16 @@ const CProduct = ({ className }) => {
         <a>
           <img src="https://images.unsplash.com/photo-1449247709967-d4461a6a6103?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=400&h=400&q=80" />
           <div className="pt-3 flex items-center justify-between">
-            <p className="font-semibold sm:text-xs xl:text-base lg:text-base md:text-base">Kem Dưỡng La Roche-Posay Làm Dịu...</p>
+            <p className="font-semibold sm:text-xs xl:text-base lg:text-base md:text-base">
+              {item.nameProduct}
+            </p>
           </div>
         </a>
       </Link>
       <div className="w-full flex items-center gap-4">
-        <p className="custom-font-size pt-1 font-semibold text-red-600">5.000.000 VNĐ</p>
+        <p className="custom-font-size pt-1 font-semibold text-red-600">
+          5.000.000 VNĐ
+        </p>
         <strike className="custom-font-size pt-1 font-semibold text-gray-400 text-xs">
           500.000 VNĐ
         </strike>
@@ -31,6 +45,7 @@ const CProduct = ({ className }) => {
         <button
           className="w-full text-black font-semibold rounded-lg"
           style={{ backgroundColor: "#ffd429", height: 35 }}
+          onClick={() => handelAddToCart(item.idProduct)}
         >
           Thêm vào giỏ hàng
         </button>

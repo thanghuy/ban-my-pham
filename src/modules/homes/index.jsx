@@ -12,7 +12,7 @@ const HomeModule = () => {
   useEffect(() => {
     const fetchProduct = async () => {
       try {
-        const res = await CategoryApi.getCategory();
+        const res = await ProductApi.getNewProductByAmount(1);
         console.log(res)
       } catch (error) {
         

@@ -6,9 +6,9 @@ const ProductApi ={
         const url = `/${SYSTEM_API.PRODUCT.GET_PRODUCT}?`;
         return axiosClient.get(url, {context:"view"});
     },
-    getDetail : (id) =>{
-        const url = "/products/"+id;
-        return axiosClient.get(url);
+    getDetail : () =>{
+        const url = `/${SYSTEM_API.CATEGORY.GET_CATERGORY}?`;
+        return axiosClient.get(url, {context:"view"});
     }
 }
 export default ProductApi;

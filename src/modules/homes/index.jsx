@@ -4,6 +4,7 @@ import CButton from "../../components/CButton";
 import CCarousel from "../../components/CCarousel/CCarousel";
 import CProduct from "../../components/CProduct/CProduct";
 import useWindowSize from "../../hooks/useWindowSize";
+import CategoryApi from "../../api/category/categoryApi";
 
 const HomeModule = () => {
   const arr = [1, 2, 3, 4, 5, 6, 7, 8];
@@ -11,7 +12,7 @@ const HomeModule = () => {
   useEffect(() => {
     const fetchProduct = async () => {
       try {
-        const res = await ProductApi.getProduct();
+        const res = await CategoryApi.getCategory();
         console.log(res)
       } catch (error) {
         

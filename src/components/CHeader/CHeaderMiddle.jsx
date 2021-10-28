@@ -1,14 +1,29 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import SearchIcon from "@mui/icons-material/Search";
+import DehazeIcon from "@mui/icons-material/Dehaze";
 import Badge from "@mui/material/Badge";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import PersonOutlineIcon from '@mui/icons-material/PersonOutline';
 import { useRouter } from "next/router";
+import { styled } from "@mui/system";
+import ListMenuPhone from "../CHeaderPhone/CListMenu";
+import { Drawer } from "@mui/material";
+import { menuList } from "../../common/defaultMenu";
 
-const CHeaderMiddle = () => {
+const StyledBadge = styled(Badge)(({ theme }) => ({
+  '& .MuiBadge-badge': {
+    right: -3,
+    top: 13,
+    padding: '0 4px',
+  },
+}));
+
+const CHeaderMiddle = ({inforCart}) => {
   const router = useRouter();
   const [isFixedMenu, setFixedMenu] = useState(false);
+  const [showMenuListLeft, setShowMenuListLeft] = React.useState(false);
+
   const handleScroll = () => {
     if(window.scrollY >= 100){
       setFixedMenu(true)
@@ -23,34 +38,42 @@ const CHeaderMiddle = () => {
       window.removeEventListener('scroll', handleScroll);
     }
   },[])
- 
+  const toggleDrawerLeft = (open) => (e) => {
+    setShowMenuListLeft(open);
+  };
   return (
     <div
       className={`${isFixedMenu ? "fixed-menu-bar" : ""} grid grid-cols-12 gap-4 px-20 items-center`}
       style={{ height: 80 }}
     >
-      <div className="col-span-3">
+      <div className="col-span-3 flex gap-x-5 items-center">
         <Link href="/">
           <a>
             <img
               src="https://cdn.shopify.com/s/files/1/0031/5870/4239/files/logo_dae52ba6-8214-40c5-9a44-d0c32a233d1f_215x.png?v=1615803687"
-              width="200"
-              height="60"
+              width="150"
+              height="40"
             />
           </a>
         </Link>
+        <div className="p-3 rounded-lg flex items-center gap-3 cursor-pointer"
+          style={{ height: 40, backgroundColor: "white" }} 
+          onClick={() => setShowMenuListLeft(true)}  
+        >
+          <DehazeIcon />
+        </div>
       </div>
       <div className="col-span-6">
-        <div className="bg-white p-1 rounded-lg flex" style={{ height: 50 }}>
+        <div className="bg-white rounded-lg flex" style={{ height: 40 }}>
           <input
-            className="w-full rounded p-2"
+            className="w-full rounded-lg p-2"
             type="text"
             placeholder="Tìm kiếm sản phẩm..."
           />
           <button
-            className="hover:bg-red-300 rounded-lg text-black"
+            className="hover:bg-red-300 flex items-center justify-center rounded-lg text-black"
             style={{ width: 50, backgroundColor: "#ffd429" }}
-            onClick={() => router.push("/danh-sach-san-pham")}
+            onClick={() => router.push("/san-pham")}
           >
             <SearchIcon />
           </button>
@@ -59,24 +82,31 @@ const CHeaderMiddle = () => {
       <div className="col-span-3 flex justify-end items-center gap-2">
         <div
           className="bg-opacity-75 p-5 rounded-lg flex items-center gap-3 cursor-pointer"
-          style={{ height: 50, backgroundColor: "#ffffff" }}
+          style={{ height: 40, backgroundColor: "#ffffff" }}
           onClick={() => router.push("/gio-hang")}
         >
           <PersonOutlineIcon />
         </div>
         <div
           className="bg-opacity-75 p-5 rounded-lg flex items-center gap-3 cursor-pointer"
-          style={{ height: 50, backgroundColor: "#ffd429" }}
+          style={{ height: 40, backgroundColor: "#ffd429" }}
           onClick={() => router.push("/gio-hang")}
         >
           <label className="text-black font-semibold cursor-pointer">
             Giỏ hàng
           </label>
-          <Badge badgeContent={4} color="primary">
+          <StyledBadge badgeContent={inforCart.totalAmount} color="primary">
             <ShoppingCartIcon />
-          </Badge>
+          </StyledBadge>
         </div>
       </div>
+      <Drawer
+        anchor={"left"}
+        open={showMenuListLeft}
+        onClose={toggleDrawerLeft(false)}
+      >
+        <ListMenuPhone setShowMenuListLeft={setShowMenuListLeft} setShowMenuListRight={setShowMenuListLeft}  arrMenu={menuList} />
+      </Drawer>
     </div>
   );
 };

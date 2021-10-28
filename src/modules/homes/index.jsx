@@ -80,7 +80,8 @@ const HomeModule = () => {
       </div>
       <div className="grid xl:grid-cols-5 lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 gap-2">
         {arr.map((item) => {
-          return <CProduct className="col-span-1" key={item} />;
+          return <CProduct className="col-span-1" key={item} item={
+            { idProduct: 1, nameProduct: "Sữa Rửa Mặt Cetaphil Dịu Nhẹ Không Xà Phòng 500ml Gentle Skin Cleanser" }} />
         })}
       </div>
       <div
@@ -91,7 +92,8 @@ const HomeModule = () => {
       </div>
       <div className="grid xl:grid-cols-5 lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 gap-2">
         {arr.map((item) => {
-          return <CProduct className="col-span-1" key={item} />;
+          return <CProduct className="col-span-1" key={item} item={
+            { idProduct: 1, nameProduct: "Sữa Rửa Mặt Cetaphil Dịu Nhẹ Không Xà Phòng 500ml Gentle Skin Cleanser" }} />
         })}
       </div>
       <div

@@ -8,7 +8,7 @@ import CallIcon from "@mui/icons-material/Call";
 import BottomNavigation from "@mui/material/BottomNavigation";
 import BottomNavigationAction from "@mui/material/BottomNavigationAction";
 import { useRouter } from "next/router";
-const CNavBarPhone = () => {
+const CNavBarPhone = ({inforCart}) => {
   const router = useRouter();
   const [value, setValue] = React.useState(0);
   return (
@@ -38,7 +38,7 @@ const CNavBarPhone = () => {
         <BottomNavigationAction
           label="Giỏ hàng"
           icon={
-            <Badge badgeContent={4} color="primary">
+            <Badge badgeContent={inforCart.totalAmount} color="primary">
               <ShoppingCartIcon />
             </Badge>
           }

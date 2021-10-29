@@ -7,5 +7,8 @@ export const SYSTEM_API = {
     },
     CART: {
         GET_CART: "/api/abc"
+    },
+    ORDER: {
+        CREATE_ORDER: "wordpress/wp-json/wc/v3/orders"
     }
 }

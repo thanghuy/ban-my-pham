@@ -5,6 +5,7 @@ import CCarousel from "../../components/CCarousel/CCarousel";
 import CProduct from "../../components/CProduct/CProduct";
 import useWindowSize from "../../hooks/useWindowSize";
 import CategoryApi from "../../api/category/categoryApi";
+import OrderApi from "../../api/order/orderApi";
 
 const HomeModule = () => {
   const arr = [1, 2, 3, 4, 5, 6, 7, 8];
@@ -25,7 +26,48 @@ const HomeModule = () => {
         //     orderby: "date"
         // })
         //   let res = await ProductApi.getProductById(16,{context: "view"});
-
+          let order = {
+              "payment_method": "cod",
+              "payment_method_title": "Trả tiền mặt khi nhận hàng",
+              "set_paid": false,
+              "billing": {
+                  "first_name": "John",
+                  "last_name": "Doe",
+                  "address_1": "969 Market",
+                  "address_2": "",
+                  "city": "San Francisco",
+                  "state": "CA",
+                  "postcode": "94103",
+                  "country": "US",
+                  "email": "john.doe@example.com",
+                  "phone": "(555) 555-5555"
+              },
+              "shipping": {
+                  "first_name": "John",
+                  "last_name": "Doe",
+                  "address_1": "969 Market",
+                  "address_2": "",
+                  "city": "San Francisco",
+                  "state": "CA",
+                  "postcode": "94103",
+                  "country": "US"
+              },
+              "line_items": [
+                  {
+                      "product_id": 12,
+                      "quantity": 100
+                  }
+              ],
+              "shipping_lines": [
+                  {
+                      "method_id": "Đồng giá",
+                      "method_title": "Flat Rate",
+                      "total": "0"
+                  }
+              ],
+              "status": "processing"
+          };
+          let res = await OrderApi.createOrder(order);
         console.log(res)
       } catch (error) {
       }

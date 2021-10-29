@@ -5,8 +5,7 @@ const axiosClient = axios.create({
     baseURL : URL,
     headers : {
         'content-type' : 'application/json',
-    },
-    paramsSerializer : params => queryString.stringify(params),
+    }
 })
 
 axiosClient.interceptors.request.use( async (config) => {

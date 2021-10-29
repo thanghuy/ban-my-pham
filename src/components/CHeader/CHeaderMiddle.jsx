@@ -8,8 +8,9 @@ import PersonOutlineIcon from '@mui/icons-material/PersonOutline';
 import { useRouter } from "next/router";
 import { styled } from "@mui/system";
 import ListMenuPhone from "../CHeaderPhone/CListMenu";
-import { Drawer } from "@mui/material";
+import { Drawer, SvgIcon } from "@mui/material";
 import { menuList } from "../../common/defaultMenu";
+
 
 const StyledBadge = styled(Badge)(({ theme }) => ({
   '& .MuiBadge-badge': {
@@ -50,7 +51,7 @@ const CHeaderMiddle = ({inforCart}) => {
         <Link href="/">
           <a>
             <img
-              src="https://cdn.shopify.com/s/files/1/0031/5870/4239/files/logo_dae52ba6-8214-40c5-9a44-d0c32a233d1f_215x.png?v=1615803687"
+              src="/logo.svg"
               width="150"
               height="40"
             />

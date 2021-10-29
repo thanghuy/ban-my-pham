@@ -12,9 +12,6 @@ const HomeModule = () => {
   useEffect(() => {
     const fetchProduct = async () => {
       try {
-<<<<<<< Updated upstream
-        const res = await ProductApi.getNewProductByAmount(1);
-=======
         const filter = {
           id: 1,
           name: "2"
@@ -28,7 +25,7 @@ const HomeModule = () => {
         //     orderby: "date"
         // })
         //   let res = await ProductApi.getProductById(16,{context: "view"});
-          
+
         console.log(res)
       } catch (error) {
       }

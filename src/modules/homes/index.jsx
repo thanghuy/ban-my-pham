@@ -28,8 +28,7 @@ const HomeModule = () => {
         //     orderby: "date"
         // })
         //   let res = await ProductApi.getProductById(16,{context: "view"});
-
->>>>>>> Stashed changes
+          
         console.log(res)
       } catch (error) {
       }

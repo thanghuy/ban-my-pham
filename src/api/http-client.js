@@ -1,12 +1,10 @@
 import axios from 'axios';
-import queryString from 'query-string';
 const URL = "https://sit.api.hicas.vn";
 const axiosClient = axios.create({
     baseURL : URL,
     headers : {
         'content-type' : 'application/json',
-    },
-    paramsSerializer : params => queryString.stringify(params),
+    }
 })
 
 axiosClient.interceptors.request.use( async (config) => {

@@ -2,9 +2,9 @@ import { SYSTEM_API } from '../../common/contants';
 import axiosClient from '../http-client';
 
 const ProductApi ={
-    getProduct : () =>{
+    getProduct : (params) =>{
         const url = `/${SYSTEM_API.PRODUCT.GET_PRODUCT}`;
-        return axiosClient.get(url);
+        return axiosClient.get(url, {params});
     },
     getDetail : (id) =>{
         const url = "/products/"+id;

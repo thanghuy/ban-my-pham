@@ -11,7 +11,11 @@ const HomeModule = () => {
   useEffect(() => {
     const fetchProduct = async () => {
       try {
-        const res = await ProductApi.getProduct();
+        const filter = {
+          id: 1,
+          name: "2"
+        }
+        const res = await ProductApi.getProduct(filter);
         console.log(res)
       } catch (error) {
         

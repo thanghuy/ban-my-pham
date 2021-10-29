@@ -6,18 +6,13 @@ const ProductApi ={
         const url = `/${SYSTEM_API.PRODUCT.GET_PRODUCT}?`;
         return axiosClient.get(url, {context:"view"});
     },
-    getDetail : () =>{
-        const url = `/${SYSTEM_API.CATEGORY.GET_CATERGORY}?`;
-        return axiosClient.get(url, {context:"view"});
+    getNewProductByAmount(params) {
+        const url = `/${SYSTEM_API.PRODUCT.GET_PRODUCT}`;
+        return axiosClient.get(url, {params});
     },
-    getNewProductByAmount(amount) {
-        const url = `/${SYSTEM_API.PRODUCT.GET_PRODUCT}?`;
-        return axiosClient.get(url, {
-            context:"view",
-            per_page: amount,
-            order: "desc",
-            orderby: "date"
-        });
+    getProductById(id, param) {
+        const url = `/${SYSTEM_API.PRODUCT.GET_PRODUCT}/${id}`;
+        return axiosClient.get(url, {param});
     }
 }
 export default ProductApi;

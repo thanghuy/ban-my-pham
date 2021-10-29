@@ -16,10 +16,18 @@ const HomeModule = () => {
           id: 1,
           name: "2"
         }
-        const res = await ProductApi.getProduct(filter);
+        // const res = await ProductApi.getProduct(filter);\
+        //   const res = await  CategoryApi.getCategory({context: "view"})
+        // const res = await ProductApi.getNewProductByAmount( {
+        //     context:"view",
+        //     per_page: 10,
+        //     order: "desc",
+        //     orderby: "date"
+        // })
+        //   let res = await ProductApi.getProductById(16,{context: "view"});
+
         console.log(res)
       } catch (error) {
-        
       }
     }
     fetchProduct();

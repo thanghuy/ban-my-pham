@@ -24,7 +24,11 @@ const CartService ={
                         total: parseInt(amountCart) + parseInt(item.price)
                     })
                 }else{
-                    listCartItem.push(cartItem);
+                    const amountCart = parseInt(item.amount) + parseInt(cartItem.amount);
+                    listCartItem.push({
+                        ...cartItem,
+                        total: parseInt(amountCart) + parseInt(item.price)
+                    });
                 }
             });
         }

@@ -1,11 +1,15 @@
+import { useSelector } from "react-redux";
+import Utils from "../../common/utils";
 const CCart = () => {
+  const { listCart, inforCart } = useSelector((state) => state.cart);
+
   return (
     <div className="mt-10 xl:px-20 lg:px-20 md:px-2 mb-10">
       <div className="flex bg-white shadow-md rounded-lg">
         <div className="w-3/4 px-5 py-5">
           <div className="flex justify-between border-b pb-5">
             <h1 className="font-semibold text-xl">Giỏ hàng</h1>
-            <h2 className="font-semibold text-xl">3 Sản phẩm</h2>
+            <h2 className="font-semibold text-xl">{inforCart.totalAmount} Sản phẩm</h2>
           </div>
           <div className="flex mt-5 mb-1">
             <h3 className="font-semibold text-gray-600 text-xs uppercase w-2/5">
@@ -21,39 +25,45 @@ const CCart = () => {
               Tổng tiền
             </h3>
           </div>
-          <div className="flex items-center hover:bg-gray-100 px-6 py-5">
-            <div className="flex w-2/5">
-              <div className="w-20">
-                <img
-                  className="h-24"
-                  src="https://drive.google.com/uc?id=18KkAVkGFvaGNqPy2DIvTqmUH_nk39o3z"
-                />
+          {listCart.map((item, index) => {
+            return (
+              <div
+                key={index}
+                className="flex items-center hover:bg-gray-100 px-6 py-5"
+              >
+                <div className="flex w-2/5">
+                  <div className="w-20">
+                    <img className="h-24" src={item.image} />
+                  </div>
+                  <div className="flex flex-col justify-between ml-4 flex-grow">
+                    <span className="font-bold text-sm">
+                      {item.nameProduct}
+                    </span>
+                    <span className="text-red-500 text-xs">{item.brand}</span>
+                    <a
+                      href="#"
+                      className="font-semibold hover:text-red-500 text-gray-500 text-xs"
+                    >
+                      Xoá
+                    </a>
+                  </div>
+                </div>
+                <div className="flex justify-center w-1/5">
+                  <input
+                    className="mx-2 border text-center w-8"
+                    type="number"
+                    defaultValue={item.amount}
+                  />
+                </div>
+                <span className="text-center w-1/5 font-semibold text-sm text-red-600">
+                  {Utils.formatNumber(item.price)}
+                </span>
+                <span className="text-center w-1/5 font-semibold text-sm text-red-600">
+                  {Utils.formatNumber(item.total)}
+                </span>
               </div>
-              <div className="flex flex-col justify-between ml-4 flex-grow">
-                <span className="font-bold text-sm">Trắng da ban đêm</span>
-                <span className="text-red-500 text-xs">Kem dưỡng ẩm</span>
-                <a
-                  href="#"
-                  className="font-semibold hover:text-red-500 text-gray-500 text-xs"
-                >
-                  Xoá
-                </a>
-              </div>
-            </div>
-            <div className="flex justify-center w-1/5">
-              <input
-                className="mx-2 border text-center w-8"
-                type="number"
-                defaultValue={5}
-              />
-            </div>
-            <span className="text-center w-1/5 font-semibold text-sm text-red-600">
-              1.000.000 VNĐ
-            </span>
-            <span className="text-center w-1/5 font-semibold text-sm text-red-600">
-              5.000.000 VNĐ
-            </span>
-          </div>
+            );
+          })}
           <a
             href="#"
             className="flex font-semibold text-indigo-600 text-sm mt-10"

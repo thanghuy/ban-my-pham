@@ -19,6 +19,7 @@ const CProduct = ({ className, item }) => {
       idProduct: idProduct,
       nameProduct: "demo 1",
       slug: "demo-1",
+      brand: "thuong hieu 1",
       image: "https://drive.google.com/uc?id=18KkAVkGFvaGNqPy2DIvTqmUH_nk39o3z",
       price: 15000,
       amount: 1,
@@ -29,7 +30,7 @@ const CProduct = ({ className, item }) => {
   };
   return (
     <div
-      className={`${className} transition duration-500 ease-in-out bg-white rounded-lg p-3 hover:grow shadow-lg transform hover:-translate-y-1 hover:scale-1`}
+      className={`${className} bg-white rounded-lg p-3 hover:grow shadow-lg`}
     >
       <Link href="/chi-tiet/[slug]" as={"/chi-tiet/huythang"}>
         <a>

@@ -1,8 +1,20 @@
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import Utils from "../../common/utils";
+import Link from "next/link"
+import CartService from "../../services/cart.services";
+import { setAddToCart } from "../../redux/controller/cart.slice";
 
 const CCartPhone = () => {
   const { listCart, inforCart } = useSelector((state) => state.cart);
+  const dispatch = useDispatch();
+  const handleDeleteAll = (idProduct) => {
+    const res = CartService.handleDeleteToCart(listCart, idProduct.toString());
+    dispatch(setAddToCart(res));
+  };
+  const handleUpdateCart = (amount, idProduct) => {
+    const lst = CartService.handleUpdateCart(listCart, idProduct, amount);
+    dispatch(setAddToCart(lst));
+  }
   return (
     <div className="mx-2 mt-5 mb-5 bg-white shadow-md rounded-lg">
       <div className="flex-1 py-2 px-2">
@@ -19,7 +31,7 @@ const CCartPhone = () => {
             <ul role="list" className="-my-6 divide-y divide-gray-200">
               {listCart.map((item, index) => {
                 return (
-                  <li className="py-6 flex">
+                  <li className="py-6 flex" key={index}>
                     <div className="flex-shrink-0 w-24 h-24 border border-gray-200 rounded-md overflow-hidden">
                       <img
                         src={item.image}
@@ -46,13 +58,16 @@ const CCartPhone = () => {
                           <input
                             className="mx-2 border text-center w-8"
                             type="number"
+                            min={0}
                             defaultValue={item.amount}
+                            onChange={(e) => handleUpdateCart(e.target.valueAsNumber, item.idProduct)}
                           />
                         </div>
                         <div className="flex">
                           <button
                             type="button"
                             className="font-medium text-indigo-600 hover:text-indigo-500"
+                            onClick={() => handleDeleteAll(item.idProduct)}
                           >
                             Xoá
                           </button>
@@ -70,19 +85,19 @@ const CCartPhone = () => {
         <div className="flex justify-between text-base font-medium text-gray-900">
           <p>Thành tiền</p>
           <span className="font-semibold text-sm text-red-600">
-            5.000.000 VNĐ
+            {Utils.formatNumber(inforCart.total)}
           </span>
         </div>
         <div className="flex justify-between text-base font-medium text-gray-900">
           <p>Phí vận chuyển</p>
           <span className="font-semibold text-sm text-red-600">
-            5.000.000 VNĐ
+            Miễn phí
           </span>
         </div>
         <div className="flex justify-between text-base font-medium text-gray-900">
           <p>Tổng tiền</p>
           <span className="font-semibold text-sm text-red-600">
-            5.000.000 VNĐ
+            {Utils.formatNumber(inforCart.total)}
           </span>
         </div>
         <div className="mt-6">
@@ -96,12 +111,14 @@ const CCartPhone = () => {
         <div className="mt-6 flex justify-center text-sm text-center text-gray-500">
           <p>
             hoặc{" "}
-            <button
-              type="button"
-              className="text-indigo-600 font-medium hover:text-indigo-500"
-            >
-              Tiếp tục mua hàng<span aria-hidden="true"> →</span>
-            </button>
+            <Link href="/">
+              <button
+                type="button"
+                className="text-indigo-600 font-medium hover:text-indigo-500"
+              >
+                Tiếp tục mua hàng<span aria-hidden="true"> →</span>
+              </button>
+            </Link>
           </p>
         </div>
       </div>

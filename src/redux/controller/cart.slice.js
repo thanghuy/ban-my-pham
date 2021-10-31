@@ -1,5 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit';
-import CartService from '../../services/cart';
+import CartService from '../../services/cart.services';
 const initState = {
     listCart: [],
     inforCart: {

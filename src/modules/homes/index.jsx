@@ -6,9 +6,9 @@ import CProduct from "../../components/CProduct/CProduct";
 import useWindowSize from "../../hooks/useWindowSize";
 import CategoryApi from "../../api/category/categoryApi";
 import OrderApi from "../../api/order/orderApi";
+import { listProductDefault } from "../../common/defaultMenu";
 
 const HomeModule = () => {
-  const arr = [1, 2, 3, 4, 5, 6, 7, 8];
   const size = useWindowSize();
   useEffect(() => {
     const fetchProduct = async () => {
@@ -133,9 +133,8 @@ const HomeModule = () => {
         <h2 className="sm:text-xl xl:text-2xl font-medium">Sản phẩm mới</h2>
       </div>
       <div className="grid xl:grid-cols-5 lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 gap-2">
-        {arr.map((item) => {
-          return <CProduct className="col-span-1" key={item} item={
-            { idProduct: 1, nameProduct: "Sữa Rửa Mặt Cetaphil Dịu Nhẹ Không Xà Phòng 500ml Gentle Skin Cleanser" }} />
+        {listProductDefault.map((item) => {
+          return <CProduct className="col-span-1" key={item.idProduct} item={item} />
         })}
       </div>
       <div
@@ -145,9 +144,8 @@ const HomeModule = () => {
         <h2 className="sm:text-xl xl:text-2xl font-medium">Tất cả sản phẩm</h2>
       </div>
       <div className="grid xl:grid-cols-5 lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 gap-2">
-        {arr.map((item) => {
-          return <CProduct className="col-span-1" key={item} item={
-            { idProduct: 1, nameProduct: "Sữa Rửa Mặt Cetaphil Dịu Nhẹ Không Xà Phòng 500ml Gentle Skin Cleanser" }} />
+        {listProductDefault.map((item) => {
+          return <CProduct className="col-span-1" key={item.idProduct} item={item} />
         })}
       </div>
       <div

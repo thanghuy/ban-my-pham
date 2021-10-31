@@ -97,4 +97,44 @@ export const listProductDefault = [
     price: 15000,
     amount: 2
   },
+  {
+    idProduct: "4",
+    nameProduct: "demo 3",
+    slug: "demo-1",
+    image: "https://drive.google.com/uc?id=18KkAVkGFvaGNqPy2DIvTqmUH_nk39o3z",
+    price: 15000,
+    amount: 2
+  },
+  {
+    idProduct: "5",
+    nameProduct: "demo 3",
+    slug: "demo-1",
+    image: "https://drive.google.com/uc?id=18KkAVkGFvaGNqPy2DIvTqmUH_nk39o3z",
+    price: 15000,
+    amount: 2
+  },
+  {
+    idProduct: "6",
+    nameProduct: "demo 3",
+    slug: "demo-1",
+    image: "https://drive.google.com/uc?id=18KkAVkGFvaGNqPy2DIvTqmUH_nk39o3z",
+    price: 15000,
+    amount: 2
+  },
+  {
+    idProduct: "7",
+    nameProduct: "demo 3",
+    slug: "demo-1",
+    image: "https://drive.google.com/uc?id=18KkAVkGFvaGNqPy2DIvTqmUH_nk39o3z",
+    price: 15000,
+    amount: 2
+  },
+  {
+    idProduct: "8",
+    nameProduct: "demo 3",
+    slug: "demo-1",
+    image: "https://drive.google.com/uc?id=18KkAVkGFvaGNqPy2DIvTqmUH_nk39o3z",
+    price: 15000,
+    amount: 2
+  }
 ];

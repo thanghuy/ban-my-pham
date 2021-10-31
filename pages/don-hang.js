@@ -1,7 +1,10 @@
 import * as React from 'react';
+import OrderModule from '../src/modules/order';
 
 export default function BasicButtons() {
   return (
-    <div className="w-full h-full flex justify-center items-center">Đơn hàng</div>
+    <React.Fragment>
+      <OrderModule />
+    </React.Fragment>
   );
 }

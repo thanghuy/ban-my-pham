@@ -10,5 +10,9 @@ export const SYSTEM_API = {
     },
     ORDER: {
         CREATE_ORDER: "wordpress/wp-json/wc/v3/orders"
+    },
+    POST: {
+        GET_POST: "wordpress/wp-json/wp/v2/posts"
+        
     }
 }

@@ -6,6 +6,7 @@ import CProduct from "../../components/CProduct/CProduct";
 import useWindowSize from "../../hooks/useWindowSize";
 import CategoryApi from "../../api/category/categoryApi";
 import OrderApi from "../../api/order/orderApi";
+import PostApi from "../../api/post/postApi";
 
 const HomeModule = () => {
   const arr = [1, 2, 3, 4, 5, 6, 7, 8];
@@ -67,8 +68,10 @@ const HomeModule = () => {
               ],
               "status": "processing"
           };
-          let res = await OrderApi.createOrder(order);
-        console.log(res)
+          // let res = await OrderApi.createOrder(order);
+          // let  res = await PostApi.getPost({context:"view"})
+          let res = await PostApi.getPostById(86);
+          console.log(res)
       } catch (error) {
       }
     }
